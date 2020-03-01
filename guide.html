@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniFiddler教程</title>
+    <style>
+        body {
+            max-width: 1080px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        h1 {
+            display: inline-block;
+            font-size: 4.5em;
+            margin-bottom: 6px;
+        }
+        main {
+            white-space: pre-line;
+            text-indent: 2em;
+            color: rgba(0,0,0,.85);
+            word-break: break-all;
+        }
+        .tip {
+            color: #f50;
+        }
+        .keyword {
+            font-weight: bold;
+        }
+        .colored {
+            color: #2db7f5;
+        }
+        .img-gallary > img{
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <img src="icons/fiddler.png"> <h1 class="colored">MiniFiddler</h1>
+        </header>
+        <main>
+            <div>感谢安装<span class="keyword colored"> MiniFiddler.</span></div>
+            <div>插件的来历：插件的诞生离不开著名网络代理调试工具<span class="keyword"> Fiddler </span>，这款可以看成是<span class="keyword"> Fiddler </span>在<span class="keyword"> Chrome </span>端的移植。不过由于Chrome插件提供的API限制，目前该插件只实现了URL Blocking（URL阻塞）这个功能。</div>
+            <div>下面介绍插件的基本用法：</div>
+            <div>①&nbsp;插件安装成功后，在浏览器右上角会显示插件的默认图标：<img src="icons/icon32.png" alt="MiniFiddler默认图标"/></div>
+            <div>②&nbsp;切换到任意一个页面，接着鼠标单击该图标，图标就会被点亮：<img src="icons/icon32_active.png" /></div>
+            <div>③&nbsp;接下来我们打开开发者工具，会注意到开发者工具面板多出个<span class="keyword colored">MiniFiddler 标签页</span><br></div>
+            <div class="tip">如果该标签页没有显示出来可以通过单击下方截图右边的那个箭头按钮，从下拉列表中进行选择</div>
+            <div><img src="imgs/toolbar.gif"/></div>
+            <div>插件主页面包含6个字段，分别是id，请求方法，资源类型，请求地址，状态码和操作，还有一个功能区按钮。</div>
+            <div>表头字段是可拖动的，我们可以根据自己的需要自由调节列的大小。另外鼠标点击请求地址，可以对该地址进行复制</div>
+            <div><img src="imgs/interface.png"/></div>
+            <div>我们点击<span class="keyword colored"> 查看详情 </span>按钮，会进入<span class="keyword colored">查看详情页面</span>。该页显示了请求的<span class="colored"> 请求主体 </span>以及<span class="colored"> 响应主体 </span></div>
+            <div><img src="imgs/detail.png"/></div>
+            <div>将鼠标移到<span class="colored keyword"> 请求地址 </span>上，会出现转换url编码的提示。单击请求地址栏可以切换编码方式（分别为<span class="keyword colored"> urlencoding </span>和<span class="keyword colored"> urldecoding</span>）</div>
+            <div><img src="imgs/encoding.png"/></div>
+            <div>最后我们讨论下<span class="colored keyword">功能区</span>的功能 —— 在主页面单击功能区按钮后就会出现如下界面：</div>
+            <div><img src="imgs/zone.png"/></div>
+            <div>功能区包含两个功能：一个是<span class="colored keyword"> 过滤器 </span>，另一个就是<span class="colored keyword"> URL Blocking </span></div>
+            <div><span class="colored">过滤器 </span>可以控制我们主面板上显示什么类型的请求，默认全部显示。点击相应过滤器图标可以过滤掉这部分类型资源的显示。</div>
+            <div class="img-gallary"><img src="style-active.png"><img src="image-active.png"><img src="script-active.png"></div>
+            <div><span class="colored">URL Blocking </span>可以让我们添加需要阻塞的URL请求规则，比如我们添加了一条名叫"eval的"规则，那么接下来该Tab页所有包含eval这个字段的请求都会被我们这个插件屏蔽掉。<span class="colored">（注意：该功能默认是关闭的，我们需要点击url blocking右边的switch来打开；另外我们可以添加多条规则，每条规则左边会显示一个checkbox，需要启用的规则我们把它勾上，不需要的我们把勾去掉即可）</span></div>
+            <hr />
+            <div class="colored">最后，当我们定义好阻塞规则后，我们可以将开发者工具面板关掉。可以看到，关掉面板后浏览器右上角的MiniFiddler图标依然是亮着的，我们的阻塞规则仍在生效！<br>&emsp;&emsp;<span class="tip">另外</span>我们可以<span class="tip">同时</span>对<span class="tip">多个不同Tab页</span>定义相应的规则。这些规则在Tab页之间并不会相互影响。</div>
+        </main>
+</body>
+</html>

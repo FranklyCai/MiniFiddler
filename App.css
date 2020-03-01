@@ -1,0 +1,105 @@
+.react-resizable {
+  position: relative;
+  background-clip: padding-box;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  bottom: 0;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.ant-table-row-cell-break-word {
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+img {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.important.custom-tag {
+  /* border-radius: 0; */
+  /* width: 73px; */
+  padding: 0 6px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.important.center-button {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.filter-des {
+  color: white;
+  background-color: #2db7f5;
+  font-size: 0.8rem;
+  padding: 7px;
+  margin-top: 8px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.error-row {
+  background-color: #f50c;
+  color: #fffffff7;
+}
+
+span,
+td {
+  cursor: default;
+  word-break: break-all;
+}
+
+.filter-zone {
+  border-bottom: 1px solid gray;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.ant-tag {
+  white-space: unset !important;
+  word-break: break-all;
+  margin-right: 0 !important;
+}
+
+.input-action {
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.input-action:hover {
+  color: green;
+}
+
+.ant-input-suffix {
+  right: 7px !important;
+}
+
+.ant-input {
+  padding-right: 45px !important;
+}
